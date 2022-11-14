@@ -18,16 +18,16 @@ Category.hasMany(Product, {
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
   through: {
-    mode: ProductTag,
+    model: ProductTag,
     unique: false
   },
-  as: 'product_to_tags'
+  as: 'products_to_tags'
 });
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
-    mode: ProductTag,
+    model: ProductTag,
     unique: false
   },
   as: 'tags_to_products'
